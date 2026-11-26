@@ -1,5 +1,4 @@
 function Contact({ contactInfo, setContactInfo }) {
-
     return (
         <>
             <h2>Contact</h2>

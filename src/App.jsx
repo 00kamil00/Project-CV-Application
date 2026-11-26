@@ -1,6 +1,7 @@
 import './App.css'
 import { useState } from 'react'
 import { Contact } from './components/Contact'
+import { CVPreview } from './components/CVPreview'
 
 function App() {
   const [contactInfo, setContactInfo] = useState({
@@ -20,7 +21,9 @@ function App() {
         <section className='left-column'>
           <Contact contactInfo={contactInfo} setContactInfo={setContactInfo} />
         </section>
-        <section className='right-column'></section>
+        <section className='right-column'>
+          <CVPreview contactInfo={contactInfo} />
+        </section>
       </main>
       <footer></footer>
     </>
