@@ -1,7 +1,8 @@
 import './App.css'
 import { useState } from 'react'
-import { Contact } from './components/Contact'
 import { CVPreview } from './components/CVPreview'
+import { Contact } from './components/Contact'
+import { Summary } from './components/Summary'
 
 function App() {
   const [contactInfo, setContactInfo] = useState({
@@ -12,6 +13,7 @@ function App() {
         phoneNumber: '',
         website: ''
     })
+    const [summary, setSummary] = useState("")
 
   return (
     <>
@@ -20,9 +22,10 @@ function App() {
       <main>
         <section className='left-column'>
           <Contact contactInfo={contactInfo} setContactInfo={setContactInfo} />
+          <Summary summary={summary} setSummary={setSummary} />
         </section>
         <section className='right-column'>
-          <CVPreview contactInfo={contactInfo} />
+          <CVPreview contactInfo={contactInfo} summary={summary} />
         </section>
       </main>
       <footer></footer>
