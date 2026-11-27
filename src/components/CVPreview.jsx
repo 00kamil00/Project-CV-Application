@@ -1,4 +1,4 @@
-function CVPreview({ contactInfo, summary }) {
+function CVPreview({ contactInfo, summary, experience }) {
     return (
         <>
             <h2>Live Preview</h2>
@@ -8,6 +8,12 @@ function CVPreview({ contactInfo, summary }) {
                 <p>{contactInfo.email} | {contactInfo.phoneNumber} | {contactInfo.location} | {contactInfo.website}</p>
                 <hr />
                 <p>{summary}</p>
+                <hr />
+                <p>{experience.jobTitle}</p>
+                <p>{experience.startDate}</p>
+                <p>{experience.endDate}</p>
+                <p>{experience.company} | {experience.location}</p>
+                <p>{experience.highlights}</p>
             </div>
         </>
     )
